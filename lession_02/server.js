@@ -1,7 +1,10 @@
 let http = require('http');
-let fs = require('fs')
+let fs = require('fs');
+let _ = require('lodash')
 let server = http.createServer((req, res)=>{
-    console.log(req.url, req.method);
+    // console.log(req.url, req.method);
+   const num = _.random(0, 10)
+   console.log(num)
     //writing response
  res.setHeader('Content-Type', 'text/html');
  
